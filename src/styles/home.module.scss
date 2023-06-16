@@ -1,0 +1,57 @@
+.container {
+    padding: 40px 32px;
+    display: grid;
+    gap: 24px;
+    justify-items: center;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+        "header"
+        "btns"
+        "experience"
+        "info";
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 24px;
+        grid-area: btns;
+        width: 100%;
+
+        .buttonPrimary {
+            background: linear-gradient(90deg, #777cf4 2.62%, #f47777 93.38%);
+            border-radius: 24px;
+            width: 300px;
+            padding: 12px;
+            text-align: center;
+            color: var(--text-primary);
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            justify-content: center;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 70px 60px;
+        height: 100vh;
+        grid-template-rows: fit-content(100%);
+        grid-template-columns: 60% 30%;
+        align-items: center;
+        justify-items: start;
+        justify-content: space-between;
+        grid-template-areas:
+            "header info"
+            "experience empty-1"
+            "empty-2 btns";
+    }
+}

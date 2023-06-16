@@ -6,7 +6,7 @@ export function Header() {
         <div className={styles.header}>
             <div>
                 <h1>Olá, me chamo Mykaeull!👋</h1>
-                <h2>Web Developer</h2>
+                <h2>Desenvolvedor Web</h2>
             </div>
             <Image
                 src="/my-picture.png"

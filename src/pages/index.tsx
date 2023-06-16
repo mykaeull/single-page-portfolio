@@ -1,10 +1,14 @@
 import Head from "next/head";
 import { Header } from "../components/Header";
 import { Experience } from "../components/Experience";
+import { Info } from "../components/Information";
+import styles from "../styles/home.module.scss";
+import Image from "next/image";
+import { SocialButtons } from "../components/SocialButtons";
 
 export default function Home() {
     return (
-        <>
+        <main className={styles.container}>
             <Head>
                 <title>Portifólio | Mykaeull Gomes</title>
                 <meta
@@ -14,22 +18,20 @@ export default function Home() {
             </Head>
             <Header />
             <Experience />
-            <div className="infos">
-                <h3>Languages</h3>
-                <div className="languages-info">
-                    <span>EN - Fluente</span>
-                    <span>PT-BR - Native</span>
-                </div>
-                <h3>Education</h3>
-                <div className="education-info">
-                    <span>🎓</span>
-                    <span>texto</span>
-                </div>
+            <Info />
+            <div className={styles.buttons}>
+                <SocialButtons />
+                <a className={styles.buttonPrimary} download href="/resume.pdf">
+                    Download Currículo
+                    <Image
+                        src="/download.png"
+                        alt="Download icon"
+                        width={24}
+                        height={24}
+                        priority
+                    />
+                </a>
             </div>
-            <div className="btns">
-                <div className="social"></div>
-                <button>contact me</button>
-            </div>
-        </>
+        </main>
     );
 }
