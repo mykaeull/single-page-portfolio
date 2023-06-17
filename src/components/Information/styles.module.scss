@@ -1,11 +1,11 @@
 .infos {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 100%;
-    gap: 10px;
+    gap: 24px;
     grid-area: info;
     max-width: 500px;
+    align-items: center;
 
     .languagesInfo {
         display: flex;
@@ -13,6 +13,31 @@
         gap: 14px;
         align-items: flex-start;
         width: 100%;
+        max-width: 300px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+
+        @media (min-width: 768px) {
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+
+    .educationInfo {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        max-width: 300px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+
+        @media (min-width: 768px) {
+            font-size: 24px;
+            line-height: 36px;
+        }
     }
 
     span {
